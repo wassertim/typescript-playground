@@ -1,22 +1,3 @@
-//Object's shape
-interface ICountry {
-  title: string;
-  getPopulation(): number;
-}
-
-interface ICity {
-  title: string;
-  population: number;
-}
-
-var city = <ICity>{};
-city.title = 'berlin';
-city.population = 2000000;
-
-var city2: ICity = {
-  title: 'berlin',
-  population: 2000000
-};
 
 class City implements ICity {
   title: string;

@@ -1,10 +1,3 @@
-var city = {};
-city.title = 'berlin';
-city.population = 2000000;
-var city2 = {
-    title: 'berlin',
-    population: 2000000
-};
 var City = (function () {
     function City(title, population, country) {
         this.title = title;
