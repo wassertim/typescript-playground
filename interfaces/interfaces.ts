@@ -11,8 +11,6 @@ class City implements ICity {
   }
 }
 
-var berlinCity = new City('Berlin', 2000000, new Country('Germany', 80000000));
-
 //Function Types
 interface IJQuery {
   (selector: String): any;
@@ -24,29 +22,3 @@ jQuery = function(s: String) {
 }
 
 var element = jQuery('.content');
-
-//Array Types
-interface StringArray {
-  [index: number]: string;
-}
-
-var myArray: StringArray;
-myArray = ["Bob", "Fred"];
-
-interface Dictionary {
-  [index: string]: string;
-  length: number;    // error, the type of 'length' is not a subtype of the indexer
-}
-
-var dicArray: Dictionary;
-var value = dicArray['1'];
-
-//Static And Instance Sides Of A Class
-interface ClockInterface {
-    new (hour: number, minute: number);
-}
-
-class Clock implements ClockInterface  {
-    currentTime: Date;
-    constructor(h: number, m: number) { }
-}
